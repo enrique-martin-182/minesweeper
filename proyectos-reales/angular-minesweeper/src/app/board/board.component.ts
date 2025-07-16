@@ -1,4 +1,3 @@
-// src/app/board/board.component.ts
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 interface CellData {
@@ -29,7 +28,6 @@ export class BoardComponent implements OnInit {
   }
 
   initBoard() {
-    // Igual que antes: genera tablero con minas y conteos
     const board: CellData[][] = Array.from({ length: this.rows }, () =>
       Array.from({ length: this.cols }, () => ({
         isMine: false,
