@@ -1,0 +1,14 @@
+<div
+  class="cell"
+  [class.revealed]="data.isRevealed"
+  [class.mine]="data.isMine && data.isRevealed"
+  (click)="clickCell.emit()"
+  (contextmenu)="onRightClick($event)"
+>
+  <ng-container *ngIf="data.isRevealed">
+    {{ data.isMine ? '💣' : (data.aroundMines || '') }}
+  </ng-container>
+  <ng-container *ngIf="!data.isRevealed && data.isFlagged">
+    🚩
+  </ng-container>
+</div>

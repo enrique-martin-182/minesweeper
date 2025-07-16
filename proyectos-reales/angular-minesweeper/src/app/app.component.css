@@ -1,0 +1,43 @@
+/* src/app/app.component.css */
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #303f9f;
+}
+
+.timer {
+  font-size: 1rem;
+  color: #555;
+}
+
+.gameover {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #c62828;
+  font-weight: 500;
+}

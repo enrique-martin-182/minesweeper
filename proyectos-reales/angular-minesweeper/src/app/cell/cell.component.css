@@ -1,0 +1,23 @@
+.cell {
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+  border: 1px solid #bbb;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+.cell:hover {
+  background: #e0e0e0;
+}
+.cell.revealed {
+  background: #ddd;
+  border-color: #999;
+  cursor: default;
+}
+.cell.mine.revealed {
+  background: #e57373;
+}

@@ -1,0 +1,14 @@
+<!-- src/app/app.component.html -->
+<div class="container">
+  <h1>Buscaminas</h1>
+  <div class="controls">
+    <button (click)="newGame()">🔄 Nueva partida</button>
+    <div class="timer">⏱️ Tiempo: {{ timer | number:'2.0' }}s</div>
+  </div>
+  <app-board
+    [isBlocked]="gameOver"
+    (firstClick)="onFirstClick()"
+    (hitMine)="onGameOver()"
+  ></app-board>
+  <div *ngIf="gameOver" class="gameover">💥 ¡Has perdido! 💥</div>
+</div>

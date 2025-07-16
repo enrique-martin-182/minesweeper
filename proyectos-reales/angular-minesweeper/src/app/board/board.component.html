@@ -1,0 +1,11 @@
+<!-- src/app/board/board.component.html -->
+<div class="board" [class.blocked]="isBlocked">
+  <div class="row" *ngFor="let row of grid; let r = index">
+    <app-cell
+      *ngFor="let cell of row; let c = index"
+      [data]="cell"
+      (clickCell)="revealCell(r, c)"
+      (flagCell)="toggleFlag(r, c)"
+    ></app-cell>
+  </div>
+</div>
